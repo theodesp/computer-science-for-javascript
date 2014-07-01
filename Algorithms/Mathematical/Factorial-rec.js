@@ -8,6 +8,7 @@
 * 
 * @module Algorithms
 * @submodule Mathematical
+* @class Factorial-rec
 * @param {Number} n A positive number
 * @return {Number} Factorial n!
 *
@@ -18,12 +19,12 @@
 *   ==>5040
 * 
 */
-function Factorial(n) {
+function Factorial-rec(n) {
     //Compute n!
     if (n <= 1) {
         return 1;
     }
     else {
-        return n * Factorial(n - 1);
+        return n * Factorial-rec(n - 1);
     }
 }
