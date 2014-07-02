@@ -8,7 +8,6 @@
 * 
 * @module Algorithms
 * @submodule Mathematical
-* @class Factorial-rec
 * @param {Number} n A positive number
 * @return {Number} Factorial n!
 *

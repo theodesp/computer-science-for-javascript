@@ -8,7 +8,6 @@
 * 
 * @module Algorithms
 * @submodule Backtracking
-* @class Permutation
 * @param {Array} a An array of distinct elements
 * @param {Number} k A starting index
 * @param {Number} n An ending index
@@ -36,7 +35,7 @@ function _swap(list, a, b) {
 function Permutation(list, k, n) {
     var i;
     if (list && k === n) { // print permutation
-        console.log(list);
+        console.log(list.join(""));
     } 
     else {
         for (i = k; i <= n; i += 1) 
