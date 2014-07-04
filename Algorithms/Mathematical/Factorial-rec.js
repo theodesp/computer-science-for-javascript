@@ -18,12 +18,12 @@
 *   ==>5040
 * 
 */
-function Factorial(n) {
+function Factorial-rec(n) {
     //Compute n!
     if (n <= 1) {
         return 1;
     }
     else {
-        return n * Factorial(n - 1);
+        return n * Factorial-rec(n - 1);
     }
 }
