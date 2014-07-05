@@ -17,7 +17,7 @@
 
 function Rank(array) {
 
-    var i, j, l = array.length, rank = [];
+    var i, j, l = array ? array.length : 0;, rank = [];
     rank.length = l;
     
     for (i = 0; i < l; i += 1) {
