@@ -16,8 +16,7 @@
 */
 
 function Polynomial(coeff, x) {
-    if (coeff) {
-        var value = 1, len = coeff.length, result = coeff[0];
+        var value = 1, len = coeff ? coeff.length : 0, result = coeff[0];
         for (var i = 1; i < len; i += 1) {
             
             // add the next term value
@@ -28,5 +27,4 @@ function Polynomial(coeff, x) {
             result += value * coeff[i];
         }
         return result;
-    }
 }

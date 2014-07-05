@@ -18,7 +18,7 @@
 function Horner(coeff, x) 
 {
     // Initialize result
-    var result = coeff[0], len = coeff.length;
+    var result = coeff[0], len = coeff ? coeff.length : 0;
 
     // Evaluate value of polynomial using Horner's method
     // ex. 2x^3 + 4x^2 - 6x +5 becomes ((2x +4)x -6)x +5
