@@ -13,14 +13,6 @@
 *     Bubblesort([4, 3, 9, 7, 11, 8]); ==> [3, 4, 7, 8, 9, 11]
 */
 
-function _swap(list, a, b) {
-    // Swaps a and b
-    var temp = list[a];
-    list[a] = list[b];
-    list[b] = temp;
-}
-
-
 function Bubblesort(array) {
     var i, j, l = array ? array.length : 0;
     isSwapped = false;
@@ -42,4 +34,11 @@ function Bubblesort(array) {
             break;
     }
     return array;
+}
+
+function _swap(list, a, b) {
+    // Swaps a and b
+    var temp = list[a];
+    list[a] = list[b];
+    list[b] = temp;
 }
