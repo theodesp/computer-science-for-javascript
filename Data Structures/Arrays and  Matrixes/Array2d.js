@@ -13,7 +13,6 @@
 * @param {Number } cols The number of columns
 */
 
-
 function Array2d(rows, cols) {
     
     var that = this;
@@ -55,8 +54,6 @@ function Array2d(rows, cols) {
 * @private
 */
     this._arr = create();
-
-
 }
 
 Array2d.prototype = {
@@ -74,11 +71,10 @@ Array2d.prototype = {
         for (i = 0; i < this._rows; i += 1)
             for (j = i + 1; j < this._rows; j += 1)
                 _swap(this._arr, i, j);
-    
     }
-
 };
 
+// helper function
 function _swap(array2d, a, b) {
     // Swaps a and b in 2d array
     var temp = array2d[a][b];
