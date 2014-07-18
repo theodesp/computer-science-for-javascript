@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -47,3 +49,7 @@ function Permutation(list, k, n) {
     }
 }
 
+exports._swap = _swap;
+exports.Permutation = Permutation;
+
+}(typeof exports === 'undefined' ? window : exports));

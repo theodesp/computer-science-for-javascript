@@ -1,4 +1,6 @@
- /**
+
+(function (exports) {
+/**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
 */
@@ -213,4 +215,8 @@ LinearList.prototype = {
 //Reverse,
 //Merge
 };
+
+exports.LinearList = LinearList;
+
+}(typeof exports === 'undefined' ? window : exports));
 

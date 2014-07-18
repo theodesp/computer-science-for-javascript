@@ -1,3 +1,5 @@
+(function (exports) {
+
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -27,3 +29,7 @@ function Factorial-rec(n) {
         return n * Factorial-rec(n - 1);
     }
 }
+
+exports.Factorial-rec = Factorial-rec;
+
+}(typeof exports === 'undefined' ? window : exports));

@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -42,3 +44,9 @@ function _swap(list, a, b) {
     list[a] = list[b];
     list[b] = temp;
 }
+
+exports.Bubblesort = Bubblesort;
+exports._swap = _swap;
+
+}(typeof exports === 'undefined' ? window : exports));
+

@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -28,3 +30,7 @@ function Sequential(list, item) {
         return -1;
     }
 }
+
+exports.Sequential = Sequential;
+
+}(typeof exports === 'undefined' ? window : exports));

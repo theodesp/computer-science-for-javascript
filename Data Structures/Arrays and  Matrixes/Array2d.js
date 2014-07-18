@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -70,15 +72,20 @@ Array2d.prototype = {
         var i, j;
         for (i = 0; i < this._rows; i += 1)
             for (j = i + 1; j < this._rows; j += 1)
-                _swap(this._arr, i, j);
+                _swap2d(this._arr, i, j);
     }
 };
 
 // helper function
-function _swap(array2d, a, b) {
+function _swap2d(array2d, a, b) {
     // Swaps a and b in 2d array
     var temp = array2d[a][b];
     array2d[a][b] = array2d[b][a];
     array2d[b][a] = temp;
 }
+
+exports._swap2d = _swap2d;
+exports.Array2d = Array2d;
+
+}(typeof exports === 'undefined' ? window : exports));
 

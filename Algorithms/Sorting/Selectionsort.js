@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -43,3 +45,8 @@ function Selectionsort(array) {
     }
     return array;
 }
+
+exports._swap = _swap;
+exports.Selectionsort = Selectionsort;
+
+}(typeof exports === 'undefined' ? window : exports));

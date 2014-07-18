@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -26,3 +28,7 @@ function Insertionsort(array) {
     return array;
 
 }
+
+exports.Insertionsort = Insertionsort;
+
+}(typeof exports === 'undefined' ? window : exports));

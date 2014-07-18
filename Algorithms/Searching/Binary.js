@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -23,7 +25,7 @@ function BinarySearch(array, item) {
     
     while (left <= right) {
         // find the middle point and check if the item is smaller or larger
-        middle = (left + right) / 2;
+        middle = Math.floor((left + right) / 2);
         if (item === array[middle]) {
             return middle;
         } 
@@ -37,5 +39,9 @@ function BinarySearch(array, item) {
         }
     }
     //not found
-    return -1
+    return -1;
 }
+
+exports.BinarySearch = BinarySearch;
+
+}(typeof exports === 'undefined' ? window : exports));

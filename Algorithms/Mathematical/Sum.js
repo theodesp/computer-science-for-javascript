@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -28,3 +30,8 @@ function Sum(array) {
     }
     return tsum;
 }
+
+exports.Sum = Sum;
+
+}(typeof exports === 'undefined' ? window : exports));
+

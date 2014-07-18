@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -28,3 +30,7 @@ function Polynomial(coeff, x) {
         }
         return result;
 }
+
+exports.Polynomial = Polynomial;
+
+}(typeof exports === 'undefined' ? window : exports));

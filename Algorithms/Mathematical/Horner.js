@@ -1,3 +1,5 @@
+
+(function (exports) {
 /**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
@@ -27,3 +29,7 @@ function Horner(coeff, x)
     
     return result;
 }
+
+exports.Horner = Horner;
+
+}(typeof exports === 'undefined' ? window : exports));

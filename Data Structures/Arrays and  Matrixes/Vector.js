@@ -1,4 +1,6 @@
- /**
+
+(function (exports) {
+/**
 *  Computer science for JavaScript
 *  Copyright 2014 Theofanis Despoudis
 */
@@ -115,3 +117,7 @@ Vector.prototype = {
         return new Vector(this.x / m, this.y / m);
     }
 };
+
+exports.Vector = Vector;
+
+}(typeof exports === 'undefined' ? window : exports));
