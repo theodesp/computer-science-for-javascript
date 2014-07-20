@@ -12,6 +12,7 @@
 * @submodule Searching 
 * @param {Array} list An unordered list
 * @param {Number} item The element to search for
+* @param {Function} cmp A custom comparison function that compares the values of the items
 * @return {int} The position found or -1 otherwise
 *
 * @example
@@ -19,17 +20,18 @@
 *       
 */
 
-function BinarySearch(array, item) {
+function BinarySearch(array, item, cmp) {
+    cmp = cmp || _cmp;
     //store left, right, and middle points
     var l = array.length, left = 0, right = l - 1, middle;
     
     while (left <= right) {
         // find the middle point and check if the item is smaller or larger
         middle = Math.floor((left + right) / 2);
-        if (item === array[middle]) {
+        if (cmp(item , array[middle]) == 0 ) {
             return middle;
         } 
-        else if (item < array[middle]) {
+        else if (cmp(item , array[middle]) < 0 ) {
             //search lower half part
             right = middle - 1;
         } 
@@ -40,6 +42,10 @@ function BinarySearch(array, item) {
     }
     //not found
     return -1;
+}
+
+function _cmp(a, b) {
+    return a - b;
 }
 
 exports.BinarySearch = BinarySearch;

@@ -15,9 +15,10 @@
 *     Rank([4, 3, 9, 3, 11, 9]); ==> [2, 0, 3, 1, 5, 4]
 */
 
-function Rank(array) {
+function Rank(array,cmp) {
+    cmp = cmp || _cmp;
 
-    var i, j, l = array ? array.length : 0;, rank = [];
+    var i, j, l = array ? array.length : 0, rank = [];
     rank.length = l;
     
     for (i = 0; i < l; i += 1) {
@@ -28,7 +29,7 @@ function Rank(array) {
     //compare all pairs
     for (i = 1; i < l; i += 1) {
         for (j = 0; j < i; j += 1) {
-            if (array[j] <= array[i]) {
+            if (cmp(array[j] , array[i]) <= 0) {
                 rank[i] += 1;
             } 
             else {
@@ -70,5 +71,9 @@ function Ranksort(array, rank) {
     }
     
     return sorted;
+}
+
+function _cmp(a, b) {
+    return a - b;
 }
 

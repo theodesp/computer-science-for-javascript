@@ -11,6 +11,7 @@
 * @module Algorithms
 * @submodule Sorting    
 * @param {Array} array An array to be sorted
+* @param {Function} cmp A custom comparison function that compares the values of the items
 * @return {Array} The sorted array
 * @example
 *     Selectionsort([4, 3, 9, 7, 11, 8]); ==> [3, 4, 7, 8, 9, 11]
@@ -23,7 +24,8 @@ function _swap(list, a, b) {
     list[b] = temp;
 }
 
-function Selectionsort(array) {
+function Selectionsort(array, cmp) {
+    cmp = cmp || _cmp;
     var i, j, pos, l = array ? array.length : 0, sorted = false;
     for (i = 0; !sorted && i < l-1; i += 1) {
         pos = i;
@@ -31,7 +33,7 @@ function Selectionsort(array) {
 
         //find the smallest element
         for (j = i + 1; j < l; j += 1) {
-            if (array[j] <= array[pos]) {
+            if (cmp(array[j] , array[pos]) <= 0) {
                 //found! Save position
                 pos = j;
             } 
@@ -44,6 +46,10 @@ function Selectionsort(array) {
         _swap(array, pos, i);
     }
     return array;
+}
+
+function _cmp(a, b) {
+    return a - b;
 }
 
 exports._swap = _swap;

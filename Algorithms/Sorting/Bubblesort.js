@@ -10,12 +10,14 @@
 * @module Algorithms
 * @submodule Sorting   
 * @param {Array} array An array to be Sorted
+* @param {Function} cmp A custom comparison function that compares the values of the items
 * @return {Array} The sorted array
 * @example
 *     Bubblesort([4, 3, 9, 7, 11, 8]); ==> [3, 4, 7, 8, 9, 11]
 */
 
-function Bubblesort(array) {
+function Bubblesort(array,cmp) {
+    cmp = cmp || _cmp;
     var i, j, l = array ? array.length : 0;
     isSwapped = false;
     for (i = 1; i < l; i += 1) 
@@ -24,7 +26,7 @@ function Bubblesort(array) {
         isSwapped = false;
         for (j = 0; j < l - 1; j += 1) 
         { //check adjacent elements
-            if (array[j] > array[j + 1]) 
+            if (cmp(array[j], array[j + 1]) > 0 ) 
             {
                 _swap(array, j, j + 1);
                 isSwapped = true;
@@ -43,6 +45,10 @@ function _swap(list, a, b) {
     var temp = list[a];
     list[a] = list[b];
     list[b] = temp;
+}
+
+function _cmp(a, b) {
+    return a - b;
 }
 
 exports.Bubblesort = Bubblesort;

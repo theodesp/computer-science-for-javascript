@@ -12,6 +12,7 @@
 * @submodule Searching 
 * @param {Array} list An unordered list
 * @param {Number} item The element to search for
+* @param {Function} cmp A custom comparison function that compares the values of the items
 * @return {Number} The position found or -1 otherwise
 *
 * @example
@@ -19,16 +20,22 @@
 *       
 */
 
-function Sequential(list, item) {
+function Sequential(list, item, cmp) {
+    cmp = cmp || _cmp;
     var l = list.length;
     for (var i = 0; i < l; i += 1) {
-        if (list[i] === item) {
+        if (cmp(list[i] , item) === 0) {
             return i;
         }
     }
     if (i === list.length) { // we reached the end
         return -1;
     }
+    return -1;
+}
+
+function _cmp(a, b) {
+    return a - b;
 }
 
 exports.Sequential = Sequential;
