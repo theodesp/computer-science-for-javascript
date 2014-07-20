@@ -1,41 +1,47 @@
+**Computer science for Javascript**
+==================================
+
 A collection of classic computer science algorithms and data structures written in JavaScript.
 All of the code is available under an MIT License.
-
 Bellow is an overview of the file structure:
 
-Algorithms
+Algorithms:
+----------
 
-    -Searching
+### Searching
     
-    -Sorting
+### Sorting
     
-    -Greedy methods
+###Greedy methods
     
-    -Divide and conquer
+###Divide and conquer
     
-    -Dynamic programming
+###Dynamic programming
     
-    -Backtracking
+###Backtracking
     
-    -Geometric programming
+###Geometric programming
     
-    -Mathematical programming
+###Mathematical programming
     
-    -Bit programming    
+###Bit programming    
 
 Data Structures:
+---------------
 
-    -Lists
+###Lists
     
-    -Arrays and Matrixes
+###Arrays and Matrixes
     
-    -Stacks
+###Stacks
     
-    -Queues
+###Queues
     
-    -Trees
+###Trees
     
-    -Graphs
+###Graphs
     
-    -Hashtables
+###Hashtables
  
+
+  
