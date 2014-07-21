@@ -8,10 +8,10 @@ Bellow is an overview of the file structure:
 Algorithms:
 ----------
 
-### Searching
-    
+### Searching: 
+    Sequential, Binary
 ### Sorting
-    
+    Bubblesort, Quicksort, Selectionsort, Insertionsort, Ranksort
 ###Greedy methods
     
 ###Divide and conquer
@@ -19,6 +19,7 @@ Algorithms:
 ###Dynamic programming
     
 ###Backtracking
+    String Permutation,
     
 ###Geometric programming
     
@@ -30,8 +31,10 @@ Data Structures:
 ---------------
 
 ###Lists
+    LinearList
     
 ###Arrays and Matrixes
+    Array2d, Matrix
     
 ###Stacks
     
